@@ -1,0 +1,160 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Maestro.master.cs" Inherits="EjercicioPropuestoPractica04.Maestro" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Tienda</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="Estilos/PaginaMaestra.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Default.aspx">
+                <img src="modern home (3).png" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Default.aspx">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Tienda.aspx">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nosotros</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <footer>
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <img src="modern home (3).png" />
+                    <hr class="light" />
+                    <p>444-444-444</p>
+                    <p>email@myemail.com</p>
+                    <p>Avenida Y - 487</p>
+                    <p>Peru, Estado, 00000</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light" />
+                    <h5>Nuestros Horarios</h5>
+                    <hr class="light" />
+                    <p>Lunes a Viernes: 9am - 10pm</p>
+                    <p>Sabados: 9am - 4pm</p>
+                    <p>Domingos: Sin atencion</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light" />
+                    <h5>Nivel Nacional</h5>
+                    <hr class="light" />
+                    <p>Arequipa</p>
+                    <p>Moquegua</p>
+                    <p>Tacna</p>
+                </div>
+                <div class="col-12">
+                    <hr class="light" />
+                    <h5>&copy; Desarrollo De Aplicaciones</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function FuncionInventario(selectValue) {
+            var vcodigo = " ";
+            var vnombre = " ";
+            var vdescp = " ";
+            var vmarca = " ";
+            var vprecio = " ";
+            var vx = selectValue.value;
+            if (selectValue.value == "1") {
+                vcodigo = "0123001"
+                vnombre = "Batidora Kitchenaid Clásica 5K45SSEOB Negro"
+                vdescp = "La transmisión directa garantiza una potencia constante, silenciosa y fiable y, gracias a su acción planetaria original, proporciona gran rapidez durante todo el proceso de mezclado."
+                vmarca = "KitchenAid"
+                vprecio = "S/ 1,599.00"
+            }
+            if (selectValue.value == "2") {
+                vcodigo = "0124001"
+                vnombre = "Cafetera Venus 12 Tazas Negro Blanco"
+                vdescp = "Tipo: Cafetera, Material: Resistente, Color: Negro / Blanco, Garantía: 2 años"
+                vmarca = "Taurus"
+                vprecio = "S/ 99.90"
+            }
+            if (selectValue.value == "3") {
+                vcodigo = "0125001"
+                vnombre = "Extractor de Jugos Oster 600W Acero"
+                vdescp = "Boca de almacenamiento 2 veces más grande para frutas de cualquier tamaño"
+                vmarca = "Oster"
+                vprecio = "S/ 339.90"
+            }
+            if (selectValue.value == "4") {
+                vcodigo = "0126001"
+                vnombre = "Freidora De Aire TH-AF60DI"
+                vdescp = "Potencia 1700 Watts, Capacidad 5 litros, Panel de control digital LCD, Oil Free, Freidora de aire caliente para freír, hornear y asar sin aceite todo tipo de alimentos"
+                vmarca = "THOMAS"
+                vprecio = "S/ 599.00"
+            }
+            if (selectValue.value == "5") {
+                vcodigo = "0127001"
+                vnombre = "Hervidor Oster 2.5L Rojo"
+                vdescp = "Reloj termómetro que permite medir la temperatura del agua con presición, Ventana de nivel de agua de gran capacidad(2.5L) de agua"
+                vmarca = "Oster"
+                vprecio = "S/ 209.00"
+            }
+            if (selectValue.value == "6") {
+                vcodigo = "0128001"
+                vnombre = "Horno Microondas con Dorador AGE83X 23Lt"
+                vdescp = "El Horno microondas tiene un recubrimiento interior de cerámica que, en comparación con otros interiores, ofrece una protección antibacterial hasta del 99.9%*. Además de tener una superficie fácil de limpiar"
+                vmarca = "SAMSUNG"
+                vprecio = "S/ 429.00"
+            }
+            if (selectValue.value == "7") {
+                vcodigo = "0129001"
+                vnombre = "Licuadora Taurus 1.5 L TJB-1300 1782201"
+                vdescp = "Potencia: 1300W, 4 Cuchillas de alto rendimiento en acero inoxidable desmontables."
+                vmarca = "TAURUS"
+                vprecio = "S/ 149.90"
+            }
+            if (selectValue.value == "8") {
+                vcodigo = "0129001"
+                vnombre = "Olla Arrocera Multifunción 5LT VL DIG21 Plateada"
+                vdescp = "Color Plateada, Capacidad 5 Litros, Material de Acero Inoxidable"
+                vmarca = "LG VALESKA"
+                vprecio = "S/ 329.90"
+            }
+            document.getElementById("codigo").value = vcodigo;
+            document.getElementById("nombre").value = vnombre;
+            document.getElementById("descripcion").value = vdescp;
+            document.getElementById("marca").value = vmarca;
+            document.getElementById("precio").value = vprecio;
+            Grafico.src = "productos/imagen" + vx + ".jpg";
+        }
+    </script>
+</body>
+</html>
+
